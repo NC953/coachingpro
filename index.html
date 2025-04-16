@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching & Formations Professionnelles | NC Conseil & Formation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0054b4;
+            --primary-purple: #7209b7;
+            --light-bg: #f3f3f3;
+            --transition-slow: all 0.5s ease;
+            --transition-medium: all 0.3s ease;
+            --transition-fast: all 0.2s ease;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--light-bg);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,84,180,0.05) 0%, rgba(114,9,183,0.15) 100%);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-purple);
+            transition: var(--transition-medium);
+            box-shadow: 0 4px 15px rgba(114,9,183,0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(114,9,183,0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary-blue);
+            transition: var(--transition-medium);
+            box-shadow: 0 4px 15px rgba(0,84,180,0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,84,180,0.4);
+        }
+        
+        .theme-card {
+            transition: var(--transition-medium);
+            border-radius: 12px;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .theme-card i {
+            transition: var(--transition-medium);
+        }
+        
+        .theme-card:hover i {
+            transform: scale(1.2);
+            color: var(--primary-purple);
+        }
+        
+        .step-card {
+            transition: var(--transition-medium);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card {
+            transition: var(--transition-medium);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0054b4, #7209b7, #0054b4, #7209b7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .navbar {
+            transition: var(--transition-medium);
+        }
+        
+        .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(114, 9, 183, 0.7);
+            }
+            
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(114, 9, 183, 0);
+            }
+            
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(114, 9, 183, 0);
+            }
+        }
+    </style>
+    <meta name="description" content="coachingpro
+">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-[#0054b4]">NC Conseil &amp; Formation</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium hover:text-[#7209b7] transition-colors">Accueil</a>
+                <a href="#thematiques" class="font-medium hover:text-[#7209b7] transition-colors">Thématiques</a>
+                <a href="#methode" class="font-medium hover:text-[#7209b7] transition-colors">Notre méthode</a>
+                <a href="#temoignages" class="font-medium hover:text-[#7209b7] transition-colors">Témoignages</a>
+                <a href="#contact" class="font-medium hover:text-[#7209b7] transition-colors">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-[#0054b4] focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-white z-50 p-6">
+        <div class="flex justify-end">
+            <button class="text-[#0054b4] focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        
+        <div class="flex flex-col space-y-6 mt-10 items-center text-xl">
+            <a href="#" class="font-medium hover:text-[#7209b7] transition-colors">Accueil</a>
+            <a href="#thematiques" class="font-medium hover:text-[#7209b7] transition-colors">Thématiques</a>
+            <a href="#methode" class="font-medium hover:text-[#7209b7] transition-colors">Notre méthode</a>
+            <a href="#temoignages" class="font-medium hover:text-[#7209b7] transition-colors">Témoignages</a>
+            <a href="#contact" class="font-medium hover:text-[#7209b7] transition-colors">Contact</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="text-[#0054b4]">Coaching</span> &amp; <span class="text-[#7209b7]">Formations</span> Professionnelles
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-6">Améliorez la communication, la cohésion et la performance de vos équipes</h2>
+                    <p class="text-xl md:text-2xl italic text-gray-600 mb-10">"Un accompagnement sur-mesure, pour des équipes plus sereines et plus engagées."</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-primary text-white font-bold py-4 px-8 rounded-full text-center pulse">
+                            Réserver votre appel découverte offert
+                        </a>
+                        <a href="#thematiques" class="btn-secondary text-white font-bold py-4 px-8 rounded-full text-center">
+                            Découvrir nos thématiques
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/5 relative fade-in">
+                    <div class="relative z-10 floating">
+                        <img src="https://fakeimg.pl/600x400/0054b4/ffffff?text=Coaching+Professionnel" alt="Coaching professionnel" class="rounded-xl shadow-2xl">
+                    </div>
+                    <div class="absolute top-10 -right-5 w-full h-full bg-[#7209b7] rounded-xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Introduction Section -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10 relative">
+                    <span class="relative inline-block">
+                        Notre approche
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-[#7209b7]"></div>
+                    </span>
+                </h2>
+                
+                <p class="text-lg md:text-xl leading-relaxed mb-8">
+                    Chez <span class="font-semibold text-[#0054b4]">NC Conseil &amp; Formation</span>, nous accompagnons les entreprises dans le développement de la confiance, de la communication efficace, de la gestion des émotions et de la cohésion d'équipe.
+                </p>
+                
+                <p class="text-lg md:text-xl leading-relaxed">
+                    Nos interventions sont adaptées à vos enjeux, vos collaborateurs et votre culture d'entreprise, que ce soit à travers du coaching individuel, des ateliers collectifs ou des formations sur-mesure.
+                </p>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+                <div class="bg-[#f3f3f3] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-[#0054b4] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Coaching individuel</h3>
+                    <p class="text-gray-600 text-center">
+                        Accompagnement personnalisé pour les dirigeants, managers et collaborateurs clés.
+                    </p>
+                </div>
+                
+                <div class="bg-[#f3f3f3] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-[#7209b7] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Ateliers collectifs</h3>
+                    <p class="text-gray-600 text-center">
+                        Sessions interactives pour développer les compétences et renforcer la cohésion d'équipe.
+                    </p>
+                </div>
+                
+                <div class="bg-[#f3f3f3] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-r from-[#0054b4] to-[#7209b7] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Formations sur-mesure</h3>
+                    <p class="text-gray-600 text-center">
+                        Programmes adaptés aux besoins spécifiques de votre entreprise et de vos équipes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Thématiques Section -->
+    <section id="thematiques" class="py-20 px-6 bg-gradient-to-b from-[#f3f3f3] to-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block relative">
+                    <span class="relative z-10">Les thématiques que nous abordons ensemble</span>
+                    <div class="absolute bottom-0 left-0 w-full h-2 bg-[#7209b7] opacity-30 -z-10"></div>
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">
+                    Nos interventions sont construites autour de thématiques clés pour le développement de vos équipes et l'amélioration de votre environnement professionnel.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Thématique 1 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#0054b4]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-brain text-3xl text-[#0054b4]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Gestion du stress &amp; des émotions</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Apprenez à identifier les facteurs de stress, à réguler vos émotions et à développer des stratégies efficaces pour maintenir un équilibre professionnel sain.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Techniques de respiration et de relaxation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Intelligence émotionnelle au travail</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Prévention du burn-out</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Thématique 2 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#7209b7]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-comments text-3xl text-[#7209b7]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Communication assertive &amp; écoute</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Développez une communication claire, respectueuse et efficace, tout en améliorant votre capacité d'écoute active pour des échanges professionnels constructifs.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Techniques d'assertivité</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Écoute active et empathique</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Communication non violente</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Thématique 3 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#0054b4]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-crown text-3xl text-[#0054b4]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Leadership humain et management</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Cultivez un style de leadership authentique et inspirant, centré sur l'humain, pour motiver vos équipes et favoriser l'engagement.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Leadership situationnel</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Management bienveillant</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Développement des talents</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Thématique 4 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#7209b7]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-hands-helping text-3xl text-[#7209b7]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Cohésion d'équipe &amp; intelligence collective</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Renforcez les liens entre collaborateurs et exploitez la puissance de l'intelligence collective pour des projets plus innovants et des résultats amplifiés.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Team building efficace</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Méthodes collaboratives</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Créativité collective</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Thématique 5 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#0054b4]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-3xl text-[#0054b4]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Prévention des conflits et régulation</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Anticipez et gérez les tensions pour maintenir un climat de travail serein et constructif, en transformant les désaccords en opportunités d'évolution.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Médiation professionnelle</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Gestion des personnalités difficiles</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#7209b7] mr-2"></i>
+                            <span>Résolution constructive des conflits</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Thématique 6 -->
+                <div class="theme-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-[#7209b7]/10 p-4 rounded-full mr-4">
+                            <i class="fas fa-sync-alt text-3xl text-[#7209b7]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold pt-3">Accompagnement du changement</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Facilitez les transitions organisationnelles en préparant et en accompagnant vos équipes face aux évolutions de l'entreprise.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Gestion de la résistance au changement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Communication en période de transition</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#0054b4] mr-2"></i>
+                            <span>Transformation culturelle</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Notre méthode Section -->
+    <section id="methode" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block relative">
+                    <span class="relative z-10">Notre méthode en 4 étapes</span>
+                    <div class="absolute bottom-0 left-0 w-full h-2 bg-[#0054b4] opacity-30 -z-10"></div>
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">
+                    Une approche structurée et personnalisée pour garantir des résultats concrets et durables pour votre organisation.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Ligne de connexion pour desktop -->
+                <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-[#0054b4] to-[#7209b7] transform -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <!-- Étape 1 -->
+                    <div class="step-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="step-number mx-auto">1</div>
+                        <h3 class="text-xl font-bold text-center mb-4">Diagnostic personnalisé</h3>
+                        <p class="text-gray-600 text-center">
+                            Nous analysons en profondeur vos besoins, vos enjeux et votre contexte organisationnel pour identifier les leviers d'amélioration.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <i class="fas fa-search-plus text-4xl text-[#0054b4]"></i>
+                        </div>
+                        <ul class="mt-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Entretiens individuels</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Questionnaires ciblés</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Analyse organisationnelle</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Étape 2 -->
+                    <div class="step-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="step-number mx-auto">2</div>
+                        <h3 class="text-xl font-bold text-center mb-4">Plan d'action co-construit</h3>
+                        <p class="text-gray-600 text-center">
+                            Nous élaborons ensemble un programme sur-mesure adapté à vos objectifs et aux spécificités de votre entreprise.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <i class="fas fa-tasks text-4xl text-[#7209b7]"></i>
+                        </div>
+                        <ul class="mt-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Objectifs SMART</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Calendrier d'intervention</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Indicateurs de réussite</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Étape 3 -->
+                    <div class="step-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="step-number mx-auto">3</div>
+                        <h3 class="text-xl font-bold text-center mb-4">Coaching / ateliers / formation</h3>
+                        <p class="text-gray-600 text-center">
+                            Nous mettons en œuvre les actions définies, en combinant différentes approches pédagogiques pour maximiser l'impact.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <i class="fas fa-chalkboard-teacher text-4xl text-[#0054b4]"></i>
+                        </div>
+                        <ul class="mt-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Méthodes interactives</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Outils pratiques</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#7209b7] mr-2"></i>
+                                <span>Exercices concrets</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Étape 4 -->
+                    <div class="step-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="step-number mx-auto">4</div>
+                        <h3 class="text-xl font-bold text-center mb-4">Suivi &amp; bilan</h3>
+                        <p class="text-gray-600 text-center">
+                            Nous évaluons les résultats obtenus et assurons un suivi pour ancrer les changements dans la durée.
+                        </p>
+                        <div class="mt-6 flex justify-center">
+                            <i class="fas fa-chart-line text-4xl text-[#7209b7]"></i>
+                        </div>
+                        <ul class="mt-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Sessions de suivi</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Mesure des progrès</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#0054b4] mr-2"></i>
+                                <span>Ajustements si nécessaire</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bandeau clients -->
+    <section class="py-12 bg-gradient-to-r from-[#0054b4] to-[#7209b7] text-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-center mb-10">Ils nous font confiance</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+1" alt="Client 1" class="mx-auto">
+                </div>
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+2" alt="Client 2" class="mx-auto">
+                </div>
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+3" alt="Client 3" class="mx-auto">
+                </div>
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+4" alt="Client 4" class="mx-auto">
+                </div>
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+5" alt="Client 5" class="mx-auto">
+                </div>
+                <div class="bg-white/20 p-6 rounded-lg text-center hover:bg-white/30 transition-all">
+                    <img src="https://fakeimg.pl/150x80/ffffff/000000?text=Client+6" alt="Client 6" class="mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="py-20 px-6 bg-[#f3f3f3]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block relative">
+                    <span class="relative z-10">Ce que nos clients disent</span>
+                    <div class="absolute bottom-0 left-0 w-full h-2 bg-[#7209b7] opacity-30 -z-10"></div>
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">
+                    Découvrez les retours d'expérience de professionnels qui ont fait appel à nos services de coaching et de formation.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://fakeimg.pl/80x80/0054b4/ffffff?text=S" alt="Sophie M." class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sophie M.</h4>
+                            <p class="text-gray-600">Directrice RH</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "L'intervention de NC Conseil &amp; Formation a transformé notre manière de communiquer en équipe. Les ateliers sur la communication assertive ont permis de résoudre des tensions latentes et d'instaurer un climat de confiance. Je recommande vivement !"
+                    </p>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://fakeimg.pl/80x80/7209b7/ffffff?text=T" alt="Thomas L." class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Thomas L.</h4>
+                            <p class="text-gray-600">Directeur Commercial</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le coaching en leadership a été une révélation pour moi. J'ai pu développer un style de management plus humain tout en maintenant les performances de mon équipe. Les résultats sont visibles : moins de turnover et une ambiance de travail nettement améliorée."
+                    </p>
+                </div>
+                
+                <!-- Témoignage 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://fakeimg.pl/80x80/0054b4/ffffff?text=C" alt="Claire B." class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Claire B.</h4>
+                            <p class="text-gray-600">Responsable d'équipe</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "La formation sur la gestion du stress a été un véritable tournant pour notre équipe qui traversait une période difficile. Les outils concrets et les exercices pratiques nous ont permis de retrouver sérénité et efficacité. Un grand merci pour votre professionnalisme !"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action Section -->
+    <section id="contact" class="py-20 px-6 animated-gradient text-white">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer votre environnement professionnel ?</h2>
+                <p class="text-xl mb-10">
+                    Réservez un premier échange stratégique (gratuit) pour définir vos besoins et voir si un accompagnement est adapté.
+                </p>
+                
+                <a href="#" class="btn-primary inline-block text-white font-bold py-4 px-10 rounded-full text-xl pulse">
+                    Réserver un échange stratégique offert
+                </a>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/20 p-6 rounded-lg backdrop-blur-sm hover:bg-white/30 transition-all">
+                        <i class="fas fa-phone-alt text-3xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Téléphone</h4>
+                        <p>+33 (0)1 23 45 67 89</p>
+                    </div>
+                    
+                    <div class="bg-white/20 p-6 rounded-lg backdrop-blur-sm hover:bg-white/30 transition-all">
+                        <i class="fas fa-envelope text-3xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Email</h4>
+                        <p>contact@ncconseil-formation.fr</p>
+                    </div>
+                    
+                    <div class="bg-white/20 p-6 rounded-lg backdrop-blur-sm hover:bg-white/30 transition-all">
+                        <i class="fas fa-map-marker-alt text-3xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Adresse</h4>
+                        <p>12 rue de la Formation, 75000 Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulaire de contact -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block relative">
+                        <span class="relative z-10">Contactez-nous directement</span>
+                        <div class="absolute bottom-0 left-0 w-full h-2 bg-[#0054b4] opacity-30 -z-10"></div>
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Remplissez ce formulaire pour nous faire part de vos besoins spécifiques et nous reviendrons vers vous rapidement.
+                    </p>
+                </div>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="nom">Nom</label>
+                        <input type="text" id="nom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Votre nom">
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="prenom">Prénom</label>
+                        <input type="text" id="prenom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Votre prénom">
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Votre email">
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Votre téléphone">
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="entreprise">Entreprise</label>
+                        <input type="text" id="entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Nom de votre entreprise">
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <label class="block text-gray-700 mb-2" for="fonction">Fonction</label>
+                        <input type="text" id="fonction" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Votre fonction">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-2" for="message">Votre besoin</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7209b7]" placeholder="Décrivez votre besoin en quelques mots..."></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2 flex justify-center">
+                        <button type="submit" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-xl">
+                            Envoyer ma demande
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 bg-[#f3f3f3]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block relative">
+                    <span class="relative z-10">Questions fréquentes</span>
+                    <div class="absolute bottom-0 left-0 w-full h-2 bg-[#7209b7] opacity-30 -z-10"></div>
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">
+                    Retrouvez les réponses aux questions les plus courantes sur nos services de coaching et de formation.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Quelle est la durée typique d'un accompagnement ?</span>
+                        <i class="fas fa-plus text-[#7209b7]"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-gray-600">
+                        <p>La durée varie selon vos besoins et objectifs. Un coaching individuel s'étend généralement sur 3 à 6 mois avec des séances régulières. Pour les formations collectives, nous proposons des formats allant d'une demi-journée à plusieurs jours répartis dans le temps pour favoriser l'ancrage des apprentissages.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Comment se déroulent les séances de coaching et de formation ?</span>
+                        <i class="fas fa-plus text-[#7209b7]"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-gray-600">
+                        <p>Nos interventions peuvent se dérouler en présentiel dans vos locaux ou dans nos espaces partenaires, ou à distance via visioconférence. Nous privilégions les méthodes interactives et participatives, alternant apports théoriques, exercices pratiques, mises en situation et temps d'échange pour une expérience d'apprentissage optimale.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Quels sont vos tarifs ?</span>
+                        <i class="fas fa-plus text-[#7209b7]"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-gray-600">
+                        <p>Nos tarifs sont adaptés à la taille de votre structure et à la nature de l'intervention. Nous établissons un devis personnalisé après l'analyse de vos besoins lors de notre premier échange stratégique gratuit. Nos prestations peuvent être prises en charge par votre OPCO dans le cadre de la formation professionnelle continue.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Comment mesurer les résultats de l'accompagnement ?</span>
+                        <i class="fas fa-plus text-[#7209b7]"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-gray-600">
+                        <p>Nous définissons ensemble des indicateurs de réussite dès le début de l'accompagnement. Des évaluations régulières permettent de mesurer les progrès et d'ajuster si nécessaire. À la fin de l'intervention, un bilan complet est réalisé pour évaluer l'atteinte des objectifs et identifier les axes de développement futurs.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Proposez-vous des formats d'intervention spécifiques ?</span>
+                        <i class="fas fa-plus text-[#7209b7]"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-gray-600">
+                        <p>Absolument ! Nous adaptons nos formats à vos contraintes et à vos objectifs : séminaires, ateliers courts, programmes longs, coaching flash, accompagnement au fil de l'eau... Nous pouvons également créer des formats hybrides combinant différentes modalités d'intervention pour maximiser l'impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#0054b4] to-[#7209b7] text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">NC Conseil &amp; Formation</h3>
+                    <p class="mb-6">
+                        Experts en développement des compétences humaines et relationnelles pour les professionnels.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-gray-300 transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-gray-300 transition-colors">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="hover:text-gray-300 transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Nos services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Coaching individuel</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Coaching d'équipe</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Formations sur-mesure</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Ateliers thématiques</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Conférences</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Liens utiles</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Témoignages</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Ressources</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>12 rue de la Formation, 75000 Paris</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+33 (0)1 23 45 67 89</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>contact@ncconseil-formation.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/30 mt-12 pt-8 text-center">
+                <p>© 2025 NC Conseil &amp; Formation. Tous droits réservés.</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="#" class="text-sm hover:text-gray-300 transition-colors">Mentions légales</a>
+                    <a href="#" class="text-sm hover:text-gray-300 transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="text-sm hover:text-gray-300 transition-colors">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation scroll effect
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                // Fade-in elements on scroll
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            });
+            
+            // Trigger initial scroll to show elements in viewport
+            window.dispatchEvent(new Event('scroll'));
+            
+            // Mobile menu toggle
+            const menuButton = document.querySelector('.md\\:hidden');
+            const closeButton = document.querySelector('.fa-times').parentElement;
+            const mobileMenu = document.querySelector('.hidden.fixed.inset-0');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+            });
+            
+            closeButton.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+            
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // FAQ toggles
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        content.classList.add('hidden');
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
